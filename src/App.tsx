@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import './App.scss';
+const tg = (window as any).Telegram?.WebApp;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    useEffect(() => {
+        tg.ready();
+    }, [])
+
+    const onClose = () => {
+        tg.close()
+    }
+
+    return (
+        <div className="app">
+            <div className='container'>
+                <button onClick={onClose}>Закрыть</button>
+            </div>
+        </div>
+    );
 }
 
 export default App;
