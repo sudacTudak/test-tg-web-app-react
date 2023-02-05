@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.block-title {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+    line-height: calc(20 / 16);
+    text-decoration: underline;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+}
+
+.field {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.select {
+    width: 100%;
+    padding: 10px;
+}
