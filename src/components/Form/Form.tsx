@@ -38,7 +38,7 @@ export const Form: React.FC<FormProps> = ({ className, ...props }) => {
     }, [])
 
     useEffect(() => {
-        if (!country || !city || !country) {
+        if (!country || !city || !street) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
